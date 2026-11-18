@@ -67,7 +67,9 @@
 //! Extra columns are ignored; missing columns and values with incompatible types return the same
 //! errors as [`Row::try_get`].
 //!
-//! A mapped value may borrow fields such as `&str` or `&[u8]` from the row.
+//! A mapped value may borrow fields such as `&str` or `&[u8]` from the row. For types that do not
+//! borrow from the row, use [`Client::query_as`], [`Client::query_one_as`], or
+//! [`Client::query_opt_as`] to query and map in one call.
 //!
 //! # Behavior
 //!
