@@ -22,6 +22,7 @@ mod binary_copy;
 #[cfg(feature = "derive")]
 mod from_row;
 mod parse;
+mod query_as;
 #[cfg(feature = "runtime")]
 mod runtime;
 mod types;
